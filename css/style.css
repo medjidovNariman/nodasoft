@@ -1,0 +1,152 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+.main{
+  background-color: #C0DBD9;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header{
+  padding: 30.5px 30px;
+  background-color: #7FAFF7;
+  margin-bottom: 15px;
+}
+.button{
+  display: inline-block;
+  padding: 8px 15px;
+  background: #A5C7F9;
+  border-radius: 5px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+input{
+  width: 0;
+  height: 0;
+}
+label{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.blocks{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #B3F95A;
+  margin-bottom: 15px;
+}
+.block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8AD191;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 62px;
+  color: #FFFFFF;
+  height: 198px;
+  margin-bottom: 15px;
+}
+.block-1{
+  flex-basis: 390px;
+}
+.block-2{
+  flex-basis: 590px;
+}
+.block-3{
+  flex-basis: 160px;
+}
+.block-4{
+  flex-basis: 995px;
+  margin-bottom: 0;
+}
+.block-5{
+  flex-basis: 160px;
+  margin-bottom: 0;
+}
+.cards{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #88B5BF;
+  margin-bottom: 100px;
+}
+.card{
+  width: 255px;
+  height: 199px;
+  background-color: #0D89B0;
+}
+.footer{
+  height: 100px;
+  background: #7FAFF7;
+}
+.overlay{
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  
+}
+.popup{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  max-width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.title{
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 62px;
+  color: #000000;
+}
+
+#btn-close{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 39px;
+  background-color: #7FAFF6;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+#btn:checked~.overlay{
+  visibility: visible;
+}
+#btn:checked + .overlay{
+  visibility: hidden;
+}
+#btn-close:checked~.title{
+  color: red;
+}
